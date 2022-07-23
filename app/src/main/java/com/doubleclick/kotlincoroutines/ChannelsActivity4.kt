@@ -35,7 +35,7 @@ class ChannelsActivity4 : AppCompatActivity() {
             val arr = arrayOf("j", "h", "k")
             launch {
                 for (char in arr) {
-                    channel.offer(char)
+                    channel.trySend(char).isSuccess
                     delay(1000)
                 }
             }
